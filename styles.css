@@ -403,8 +403,8 @@ button {
 .highlight.visible{opacity:1;transform:none}
 
 .highlight__wrap{
-  display:flex;align-items:center;gap:40px;
-  padding:48px 56px;
+  display:flex;align-items:center;gap:32px;
+  padding:32px 40px;
   border:1px solid var(--rule);
   border-radius:2px;
   position:relative;
@@ -899,6 +899,31 @@ button {
   }
 }
 
+/* --- Responsive: Tablet/Wide Phone (768px) --- */
+@media(max-width:768px) {
+  .highlights{
+    padding:24px 20px 0;
+    gap:10px;
+  }
+  .highlights + .highlights{
+    padding-top:32px;
+  }
+  .highlight__wrap {
+    padding: 24px 20px;
+    gap: 14px;
+    flex-direction:column;
+    text-align:center;
+  }
+  .highlight__wrap::before{
+    left:20px;right:20px;
+    top:0;bottom:auto;
+    width:auto;height:2px;
+  }
+  .highlight__num {
+    font-size: 2.8rem;
+  }
+}
+
 /* --- Responsive: Mobile (480px) --- */
 @media(max-width:480px) {
   .navbar{padding:12px 16px}
@@ -979,27 +1004,6 @@ button {
     margin-bottom: 16px
   }
 
-  .highlights{
-    padding:20px 16px 0;
-    gap:10px;
-  }
-
-  .highlights + .highlights{
-    padding-top:32px;
-  }
-
-  .highlight__wrap {
-    padding: 24px 20px;
-    gap: 14px;
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .highlight__wrap::before{
-    left:16px;right:16px;
-    top:0;bottom:auto;
-    width:auto;height:2px;
-  }
 
   .btn {
     padding: 12px 24px;
