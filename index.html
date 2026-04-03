@@ -18,6 +18,25 @@
   <!-- Custom cursor -->
   <div class="cursor" id="cursor" aria-hidden="true"></div>
 
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="navbar__logo">#HUSTLE HUB</a>
+    <div class="navbar__links">
+      <a href="https://t.me/" target="_blank" rel="noopener" class="navbar__tg" aria-label="Telegram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </a>
+      <button class="navbar__theme" id="themeToggle" aria-label="Сменить цвет">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5" fill="currentColor"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -48,77 +67,61 @@
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker__fade ticker__fade--l"></div>
-    <div class="ticker__fade ticker__fade--r"></div>
-    <div class="ticker__track" id="tickerTrack">
-      <span class="ticker__item">100+ ВОРКЕРОВ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">3М+ ₽ НАВОРКАНО</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">1 БОЛЬШОЙ ПРОЕКТ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">6 МЕСЯЦЕВ РАБОТЫ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">10+ ВОРКЕРОВ НА 100К/МЕС</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">100+ ВОРКЕРОВ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">3М+ ₽ НАВОРКАНО</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">1 БОЛЬШОЙ ПРОЕКТ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">6 МЕСЯЦЕВ РАБОТЫ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">10+ ВОРКЕРОВ НА 100К/МЕС</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">100+ ВОРКЕРОВ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">3М+ ₽ НАВОРКАНО</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">1 БОЛЬШОЙ ПРОЕКТ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">6 МЕСЯЦЕВ РАБОТЫ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">10+ ВОРКЕРОВ НА 100К/МЕС</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">100+ ВОРКЕРОВ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">3М+ ₽ НАВОРКАНО</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">1 БОЛЬШОЙ ПРОЕКТ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">6 МЕСЯЦЕВ РАБОТЫ</span>
-      <span class="ticker__sep">&mdash;</span>
-      <span class="ticker__item">10+ ВОРКЕРОВ НА 100К/МЕС</span>
-      <span class="ticker__sep">&mdash;</span>
-    </div>
-  </div>
-
-  <!-- HIGHLIGHT BLOCK -->
-  <section class="highlight" data-reveal>
-    <div class="highlight__wrap">
-      <div class="highlight__num">10+</div>
-      <div class="highlight__info">
-        <p>воркеров которые вышли в ежемесячный заработок в размере</p>
-        <span class="highlight__amount">100 000 ₽/мес</span>
+  <!-- STATS -->
+  <section class="highlights" id="stats">
+    <section class="highlight visible">
+      <div class="highlight__wrap">
+        <div class="highlight__num">100+</div>
+        <div class="highlight__info"><p>воркеров</p></div>
       </div>
-    </div>
+    </section>
+    <section class="highlight visible">
+      <div class="highlight__wrap">
+        <div class="highlight__num">3М+ ₽</div>
+        <div class="highlight__info"><p>наворкано</p></div>
+      </div>
+    </section>
+    <section class="highlight visible">
+      <div class="highlight__wrap">
+        <div class="highlight__num">1</div>
+        <div class="highlight__info"><p>большой проект</p></div>
+      </div>
+    </section>
+    <section class="highlight visible">
+      <div class="highlight__wrap">
+        <div class="highlight__num">6</div>
+        <div class="highlight__info"><p>месяцев работы</p></div>
+      </div>
+    </section>
   </section>
 
-  <section class="highlight" data-reveal>
-    <div class="highlight__wrap">
-      <p class="highlight__text">Адекватное комьюнити, хорошие выплаты, быстрая поддержка, а также максимальная конфиденциальность с грамотно написанными мануалами.</p>
-    </div>
+  <!-- MAIN HIGHLIGHT -->
+  <section class="highlights">
+    <section class="highlight" data-reveal>
+      <div class="highlight__wrap">
+        <div class="highlight__num">10+</div>
+        <div class="highlight__info">
+          <p>воркеров которые вышли в ежемесячный заработок в размере</p>
+          <span class="highlight__amount">100 000 ₽/мес</span>
+        </div>
+      </div>
+    </section>
   </section>
 
-  <section class="highlight" data-reveal>
-    <div class="highlight__wrap">
-      <p class="highlight__text">Даем советы, помогаем на старте, а также все нужное для старта выдаем абсолютно всем бесплатно.</p>
-    </div>
+  <!-- APPROACH -->
+  <section class="highlights" id="approach">
+    <h2 class="highlights__heading" data-reveal>Наш подход</h2>
+    <section class="highlight" data-reveal>
+      <div class="highlight__wrap">
+        <p class="highlight__text">Адекватное комьюнити, хорошие выплаты, быстрая поддержка, а также максимальная конфиденциальность с грамотно написанными мануалами.</p>
+      </div>
+    </section>
+    <section class="highlight" data-reveal>
+      <div class="highlight__wrap">
+        <p class="highlight__text">Даем советы, помогаем на старте, а также все нужное для старта выдаем абсолютно всем бесплатно.</p>
+      </div>
+    </section>
   </section>
-
 
 
   <!-- FAQ -->

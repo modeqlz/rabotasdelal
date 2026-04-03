@@ -18,34 +18,24 @@
   }
 })();
 
-/* --- Ticker: seamless infinite scroll --- */
+
+/* --- Theme toggle (green ↔ orange) --- */
 (function(){
-  const track = document.getElementById('tickerTrack');
-  if(!track) return;
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  const root = document.documentElement;
+  const saved = localStorage.getItem('accent');
+  if(saved === 'orange') root.setAttribute('data-accent', 'orange');
 
-  let offset = 0;
-  const speed = 0.8;
-  const children = track.children;
-  const itemsPerSet = 10; // 5 items + 5 separators per set
-
-  let setWidth = 0;
-  
-  requestAnimationFrame(()=>{
-    // measure first set width
-    let w = 0;
-    for(let i = 0; i < itemsPerSet; i++){
-      w += children[i].getBoundingClientRect().width;
+  btn.addEventListener('click', ()=>{
+    const isOrange = root.getAttribute('data-accent') === 'orange';
+    if(isOrange){
+      root.removeAttribute('data-accent');
+      localStorage.setItem('accent', 'green');
+    } else {
+      root.setAttribute('data-accent', 'orange');
+      localStorage.setItem('accent', 'orange');
     }
-    w += itemsPerSet * 36; // gaps
-    setWidth = w;
-
-    function tick(){
-      offset -= speed;
-      if(Math.abs(offset) >= setWidth) offset += setWidth;
-      track.style.transform = 'translateX(' + offset + 'px)';
-      requestAnimationFrame(tick);
-    }
-    tick();
   });
 })();
 
