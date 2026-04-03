@@ -18,21 +18,35 @@
   }
 })();
 
-/* --- Theme: dark only --- */
-
-/* --- Nav scroll --- */
+/* --- Ticker: seamless infinite scroll --- */
 (function(){
-  const nav = document.getElementById('nav');
-  let ticking = false;
-  window.addEventListener('scroll',()=>{
-    if(!ticking){
-      requestAnimationFrame(()=>{
-        nav.classList.toggle('scrolled', scrollY > 60);
-        ticking = false;
-      });
-      ticking = true;
+  const track = document.getElementById('tickerTrack');
+  if(!track) return;
+
+  let offset = 0;
+  const speed = 0.8;
+  const children = track.children;
+  const itemsPerSet = 10; // 5 items + 5 separators per set
+
+  let setWidth = 0;
+  
+  requestAnimationFrame(()=>{
+    // measure first set width
+    let w = 0;
+    for(let i = 0; i < itemsPerSet; i++){
+      w += children[i].getBoundingClientRect().width;
     }
-  },{passive:true});
+    w += itemsPerSet * 36; // gaps
+    setWidth = w;
+
+    function tick(){
+      offset -= speed;
+      if(Math.abs(offset) >= setWidth) offset += setWidth;
+      track.style.transform = 'translateX(' + offset + 'px)';
+      requestAnimationFrame(tick);
+    }
+    tick();
+  });
 })();
 
 /* --- Custom cursor --- */
@@ -70,51 +84,8 @@
   requestAnimationFrame(tick);
 })();
 
-/* --- Ticker: JS-driven seamless infinite scroll --- */
-(function(){
-  const track = document.getElementById('tickerTrack');
-  if(!track) return;
 
-  // Clone content enough times to fill screen + overflow
-  const originalHTML = track.innerHTML;
-  // Add 3 more copies for guaranteed coverage
-  track.innerHTML = originalHTML + originalHTML + originalHTML + originalHTML;
 
-  let pos = 0;
-  // Measure the width of one set
-  const children = track.children;
-  const itemsPerSet = originalHTML.split('ticker__item').length - 1 + 
-                      originalHTML.split('ticker__sep').length - 1;
-  
-  // Calculate single set width after render
-  let singleSetWidth = 0;
-  requestAnimationFrame(() => {
-    // Measure first set width: count original items
-    const totalChildren = children.length;
-    const oneSetCount = totalChildren / 4;
-    let w = 0;
-    for(let i = 0; i < oneSetCount; i++){
-      w += children[i].offsetWidth;
-    }
-    // Add gaps (36px gap from CSS)
-    w += (oneSetCount - 1) * 36;
-    // Add one more gap for spacing between sets
-    w += 36;
-    singleSetWidth = w;
-
-    // Start animation
-    const speed = 0.5; // pixels per frame
-    function animate(){
-      pos -= speed;
-      if(Math.abs(pos) >= singleSetWidth){
-        pos += singleSetWidth;
-      }
-      track.style.transform = `translateX(${pos}px)`;
-      requestAnimationFrame(animate);
-    }
-    animate();
-  });
-})();
 
 /* --- Scroll reveal --- */
 (function(){
