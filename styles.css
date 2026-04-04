@@ -213,12 +213,40 @@ button {
 .hero__fern {
   position: absolute;
   inset: 0;
-  background: url('fern.png') top center / cover no-repeat;
   opacity: .35;
   pointer-events: none;
   z-index: 0;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, transparent 80%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, transparent 80%);
+}
+
+.hero__fern::before,
+.hero__fern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.7s var(--ease);
+}
+
+.hero__fern::before {
+  background-image: url('fern.png');
+  opacity: 1;
+}
+
+.hero__fern::after {
+  background-image: url('orange_bg.png');
+  opacity: 0;
+}
+
+/* Toggle layer opacities for orange theme */
+[data-accent="orange"] .hero__fern::before {
+  opacity: 0;
+}
+[data-accent="orange"] .hero__fern::after {
+  opacity: 1;
 }
 
 .hero__col {
@@ -450,7 +478,7 @@ button {
 
 /* --- Sections --- */
 .section {
-  padding: 80px 40px
+  padding: 60px 40px
 }
 
 .section__grid {
@@ -713,7 +741,7 @@ button {
 
 /* --- CTA --- */
 .cta {
-  padding: 80px 40px 120px
+  padding: 20px 40px 80px
 }
 
 .cta__wrap {
@@ -887,6 +915,12 @@ button {
 
 /* --- Responsive: Tablet/Wide Phone (768px) --- */
 @media(max-width:768px) {
+  .section, .cta {
+    padding: 32px 20px;
+  }
+  .cta {
+    padding-bottom: 48px;
+  }
   .highlights{
     padding:24px 20px 0;
     gap:10px;
