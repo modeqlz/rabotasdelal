@@ -881,7 +881,7 @@ button {
   .hero {
     flex-direction: column;
     align-items: flex-start;
-    padding: 48px 28px 40px;
+    padding: 100px 28px 40px;
     min-height: auto;
     gap: 0;
   }
@@ -976,7 +976,7 @@ button {
   .navbar__links{gap:0}
 
   .hero {
-    padding: 64px 20px 32px
+    padding: 100px 20px 32px
   }
 
   .hero__line {
@@ -1096,7 +1096,7 @@ button {
 /* --- Responsive: Small mobile (360px) --- */
 @media(max-width:360px) {
   .hero {
-    padding: 28px 16px 28px
+    padding: 90px 16px 28px
   }
 
   .hero__line {
