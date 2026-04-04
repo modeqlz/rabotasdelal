@@ -91,6 +91,28 @@
 }
 .navbar__link:hover{color:var(--t1)}
 
+.navbar__support {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--ff);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform .2s var(--ease), filter .2s;
+  cursor: none;
+}
+
+.navbar__support:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
 .navbar__tg{
   display:flex;align-items:center;justify-content:center;
   width:36px;height:36px;
@@ -791,7 +813,6 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   gap: 60px;
-  padding-top: 64px;
 }
 
 .cta__eyebrow {
@@ -931,7 +952,8 @@ button {
   .cta__wrap {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px
+    gap: 32px;
+    padding-top: 0;
   }
 
   .cta__action {
@@ -991,7 +1013,7 @@ button {
 @media(max-width:480px) {
   .navbar{padding:8px 16px !important;}
   .navbar__link{display:none}
-  .navbar__links{gap:0}
+  .navbar__links{gap:10px}
 
   .hero {
     padding: 72px 20px 32px
@@ -1050,7 +1072,6 @@ button {
   }
 
   .cta__wrap {
-    padding-top: 32px;
     gap: 24px
   }
 
