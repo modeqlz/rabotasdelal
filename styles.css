@@ -285,7 +285,7 @@ button {
 }
 
 .hero__fern::before {
-  background-image: url('fern.png');
+  background-image: url('fern_vertical.png');
   opacity: 1;
 }
 
@@ -1030,14 +1030,15 @@ button {
 /* --- Responsive: Mobile (480px) --- */
 @media(max-width:480px) {
   .navbar{
-    padding:8px 16px !important;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    padding: 12px 16px !important;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
   }
   .navbar__link{display:none}
   .navbar__links{gap:10px}
-  .navbar__logo{font-size: 0.95rem;}
+  .navbar__logo{font-size: 1.1rem;}
   .navbar__support{padding: 6px 10px; font-size: 0.55rem;}
-  .navbar__tg, .navbar__theme{width: 36px; height: 36px;}
+  .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
+  .navbar__tg svg, .navbar__theme svg { width: 16px; height: 16px; }
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 220px) 20px 40px;
@@ -1166,14 +1167,14 @@ button {
 /* --- Responsive: Small mobile (360px) --- */
 @media(max-width:360px) {
   .navbar{
-    padding: 8px 12px !important;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    padding: 10px 12px !important;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 10px) !important;
   }
   .navbar__links{gap: 6px;}
-  .navbar__logo{font-size: 0.85rem;}
+  .navbar__logo{font-size: 1.0rem;}
   .navbar__support{padding: 6px 8px; font-size: 0.5rem;}
-  .navbar__tg, .navbar__theme { width: 32px; height: 32px; }
-  .navbar__tg svg, .navbar__theme svg { width: 18px; height: 18px; }
+  .navbar__tg, .navbar__theme { width: 24px; height: 24px; }
+  .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 180px) 16px 32px;
