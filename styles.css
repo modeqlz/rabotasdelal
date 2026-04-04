@@ -391,6 +391,25 @@ button {
   height: 16px
 }
 
+/* Buttons container */
+.hero__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Outline button variant */
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn--outline:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 /* --- Hero side --- */
 .hero__side {
   display: flex;
@@ -772,7 +791,6 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   gap: 60px;
-  border-top: 1px solid var(--rule);
   padding-top: 64px;
 }
 
