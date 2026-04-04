@@ -1053,6 +1053,11 @@ button {
     margin-top: 120px
   }
 
+  .hero__rule {
+    margin-top: -80px;
+    margin-bottom: 104px;
+  }
+
   .hero__p {
     font-size: .84rem;
     margin-bottom: 24px
@@ -1192,6 +1197,11 @@ button {
 
   .hero__bottom {
     margin-top: 96px
+  }
+
+  .hero__rule {
+    margin-top: -60px;
+    margin-bottom: 80px;
   }
 
   .section {
