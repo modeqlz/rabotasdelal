@@ -1030,15 +1030,15 @@ button {
 /* --- Responsive: Mobile (480px) --- */
 @media(max-width:480px) {
   .navbar{
-    padding: 12px 16px !important;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+    padding: 16px 16px !important;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px) !important;
   }
   .navbar__link{display:none}
   .navbar__links{gap:10px}
   .navbar__logo{font-size: 1.1rem;}
-  .navbar__support{padding: 6px 10px; font-size: 0.55rem;}
-  .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
-  .navbar__tg svg, .navbar__theme svg { width: 16px; height: 16px; }
+  .navbar__support{padding: 7px 12px; font-size: 0.6rem;}
+  .navbar__tg, .navbar__theme{width: 34px; height: 34px;}
+  .navbar__tg svg, .navbar__theme svg { width: 18px; height: 18px; }
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 140px) 20px 40px;
@@ -1182,14 +1182,14 @@ button {
 /* --- Responsive: Small mobile (360px) --- */
 @media(max-width:360px) {
   .navbar{
-    padding: 10px 12px !important;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 10px) !important;
+    padding: 12px 12px !important;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
   }
   .navbar__links{gap: 6px;}
   .navbar__logo{font-size: 1.0rem;}
-  .navbar__support{padding: 6px 8px; font-size: 0.5rem;}
-  .navbar__tg, .navbar__theme { width: 24px; height: 24px; }
-  .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
+  .navbar__support{padding: 7px 10px; font-size: 0.55rem;}
+  .navbar__tg, .navbar__theme { width: 30px; height: 30px; }
+  .navbar__tg svg, .navbar__theme svg { width: 16px; height: 16px; }
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 120px) 16px 32px;
