@@ -1041,7 +1041,7 @@ button {
   .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
 
   .hero {
-    padding: calc(env(safe-area-inset-top, 0px) + 68px) 20px 32px
+    padding: calc(env(safe-area-inset-top, 0px) + 80px) 20px 40px
   }
 
   .hero__line {
@@ -1049,12 +1049,12 @@ button {
   }
 
   .hero__bottom {
-    margin-top: 28px
+    margin-top: 40px
   }
 
   .hero__p {
     font-size: .84rem;
-    margin-bottom: 16px
+    margin-bottom: 24px
   }
 
   .hero__fern::before, .hero__fern::after {
@@ -1176,7 +1176,7 @@ button {
   .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
 
   .hero {
-    padding: calc(env(safe-area-inset-top, 0px) + 64px) 16px 28px
+    padding: calc(env(safe-area-inset-top, 0px) + 72px) 16px 32px
   }
 
   .hero__line {
@@ -1184,11 +1184,12 @@ button {
   }
 
   .hero__p {
-    font-size: .8rem
+    font-size: .8rem;
+    margin-bottom: 20px
   }
 
   .hero__bottom {
-    margin-top: 24px
+    margin-top: 36px
   }
 
   .section {
