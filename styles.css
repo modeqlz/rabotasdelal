@@ -43,13 +43,8 @@
   z-index:100;
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 32px;
-  background:rgba(6,8,6,.85);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  background:rgba(6,8,6,.98);
   border-bottom:1px solid var(--rule);
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  padding-top: max(16px, env(safe-area-inset-top));
 }
 
 .navbar__logo{
@@ -953,7 +948,7 @@ button {
 
 /* --- Responsive: Mobile (480px) --- */
 @media(max-width:480px) {
-  .navbar{padding: max(12px, env(safe-area-inset-top)) 16px 12px;}
+  .navbar{padding:8px 16px}
   .navbar__link{display:none}
   .navbar__links{gap:0}
 
