@@ -175,6 +175,11 @@ button {
   cursor: none
 }
 
+b, strong {
+  font-weight: 800;
+  color: var(--t1);
+}
+
 a {
   color: inherit;
   text-decoration: none
@@ -1028,7 +1033,7 @@ button {
   .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
 
   .hero {
-    padding: 48px 20px 32px
+    padding: calc(env(safe-area-inset-top, 0px) + 100px) 20px 32px
   }
 
   .hero__line {
@@ -1154,7 +1159,7 @@ button {
   .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
 
   .hero {
-    padding: 42px 16px 28px
+    padding: calc(env(safe-area-inset-top, 0px) + 90px) 16px 28px
   }
 
   .hero__line {
