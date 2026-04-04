@@ -126,9 +126,13 @@
   transition: background .5s var(--ease2), color .5s var(--ease2);
   cursor:none;
 }
-.navbar__tg:hover{
-  background:var(--accent);
-  color:var(--bg);
+@media (hover: hover) {
+  .navbar__tg:hover{
+    transform: scale(1.1);
+  }
+  .navbar__theme:hover{
+    transform: scale(1.1) rotate(45deg);
+  }
 }
 
 .navbar__theme{
@@ -140,11 +144,6 @@
   color:var(--accent);
   transition: background .5s var(--ease2), color .5s var(--ease2), transform .3s;
   cursor:none;
-}
-.navbar__theme:hover{
-  background:var(--accent);
-  color:var(--bg);
-  transform:rotate(45deg);
 }
 
 /* --- Reset --- */
@@ -1038,7 +1037,7 @@ button {
   .navbar__links{gap:10px}
   .navbar__logo{font-size: 0.95rem;}
   .navbar__support{padding: 6px 10px; font-size: 0.55rem;}
-  .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
+  .navbar__tg, .navbar__theme{width: 36px; height: 36px;}
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 220px) 20px 40px;
@@ -1173,8 +1172,8 @@ button {
   .navbar__links{gap: 6px;}
   .navbar__logo{font-size: 0.85rem;}
   .navbar__support{padding: 6px 8px; font-size: 0.5rem;}
-  .navbar__tg, .navbar__theme { width: 24px; height: 24px; }
-  .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
+  .navbar__tg, .navbar__theme { width: 32px; height: 32px; }
+  .navbar__tg svg, .navbar__theme svg { width: 18px; height: 18px; }
 
   .hero {
     padding: calc(env(safe-area-inset-top, 0px) + 180px) 16px 32px;
