@@ -123,7 +123,7 @@
   border:none;
   background:none;
   color:var(--accent);
-  transition:background .2s,color .2s;
+  transition: background .5s var(--ease2), color .5s var(--ease2);
   cursor:none;
 }
 .navbar__tg:hover{
@@ -138,7 +138,7 @@
   border:none;
   background:none;
   color:var(--accent);
-  transition:background .2s,color .2s,transform .3s;
+  transition: background .5s var(--ease2), color .5s var(--ease2), transform .3s;
   cursor:none;
 }
 .navbar__theme:hover{
@@ -282,7 +282,7 @@ button {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: opacity 0.7s var(--ease);
+  transition: opacity .5s var(--ease2);
 }
 
 .hero__fern::before {
@@ -1041,7 +1041,8 @@ button {
   .navbar__tg, .navbar__theme{width: 28px; height: 28px;}
 
   .hero {
-    padding: calc(env(safe-area-inset-top, 0px) + 80px) 20px 40px
+    padding: calc(env(safe-area-inset-top, 0px) + 220px) 20px 40px;
+    align-items: flex-start;
   }
 
   .hero__line {
@@ -1176,7 +1177,8 @@ button {
   .navbar__tg svg, .navbar__theme svg { width: 14px; height: 14px; }
 
   .hero {
-    padding: calc(env(safe-area-inset-top, 0px) + 72px) 16px 32px
+    padding: calc(env(safe-area-inset-top, 0px) + 180px) 16px 32px;
+    align-items: flex-start;
   }
 
   .hero__line {
