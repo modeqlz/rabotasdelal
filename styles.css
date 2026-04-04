@@ -1054,13 +1054,14 @@ button {
   }
 
   .hero__rule {
-    margin-top: -80px;
-    margin-bottom: 104px;
+    margin-top: -70px;
+    margin-bottom: 60px;
   }
 
   .hero__p {
-    font-size: .84rem;
-    margin-bottom: 24px
+    font-size: .9rem;
+    line-height: 1.85;
+    margin-bottom: 36px;
   }
 
   .hero__fern::before, .hero__fern::after {
@@ -1151,13 +1152,22 @@ button {
   }
 
   .foot {
-    padding: 16px 20px
+    padding: 24px 20px calc(env(safe-area-inset-bottom, 20px) + 60px);
   }
 
   .foot__row {
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     text-align: center
+  }
+
+  .foot__links {
+    gap: 24px;
+  }
+
+  .foot__links a {
+    padding: 12px;
+    font-size: .75rem;
   }
 
   .divider {
@@ -1191,8 +1201,9 @@ button {
   }
 
   .hero__p {
-    font-size: .8rem;
-    margin-bottom: 20px
+    font-size: .85rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
   }
 
   .hero__bottom {
@@ -1200,8 +1211,8 @@ button {
   }
 
   .hero__rule {
-    margin-top: -60px;
-    margin-bottom: 80px;
+    margin-top: -55px;
+    margin-bottom: 45px;
   }
 
   .section {
